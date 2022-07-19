@@ -10,7 +10,25 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const average = (parametro) => {
+  for (let valor of parametro) {
+    if (typeof valor !== 'number') {
+     return undefined;
+    }
+  }
+  if (parametro.length === 0) {
+    return undefined;
+  }
+  
+  let somaParametro = 0;
+  for (let index = 0; index < parametro.length; index += 1) {
+    somaParametro += parametro[index];
+  }
+  let media = [somaParametro / parametro.length];
 
-const average = () => {};
+  return Math.round(media);
+};
+// let arr = [];
+// console.log(average(arr));
 
-module.exports = average; //iniciando o projeto
+module.exports = average; // iniciando o projeto

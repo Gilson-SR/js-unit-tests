@@ -28,7 +28,5 @@ const average = (parametro) => {
 
   return Math.round(media);
 };
-// let arr = [];
-// console.log(average(arr));
 
-module.exports = average; // iniciando o projeto
+module.exports = average;
